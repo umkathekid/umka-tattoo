@@ -1,15 +1,26 @@
-/* === HEADER === */
-.header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 10px 20px;
-  background-color: #fff;
-  position: relative;
+/* RESET & BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-.profile {
-  flex-shrink: 0;
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; /* центрируем на всех экранах */
+  gap: 15px;
+  padding: 15px;
+  background-color: #fff;
 }
 
 .profile .avatar {
@@ -23,37 +34,39 @@
 .contacts-wrapper {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   position: relative;
-  z-index: 1;
 }
 
 .contacts-btn, .lang-btn {
-  padding: 6px 12px;
+  padding: 6px 14px;
   border: none;
-  cursor: pointer;
-  background-color: #eee;
-  color: #333;
   border-radius: 6px;
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
 }
 
 .contacts-btn:hover, .lang-btn:hover {
-  background-color: #ddd;
+  background-color: #999;
 }
 
-/* Визитка стеклянная */
+.contacts-btn:focus, .lang-btn:focus {
+  outline: none;
+}
+
+/* Contacts Card */
 .contacts-card {
   display: none;
   position: absolute;
   top: 40px;
   left: 0;
-  padding: 10px 15px;
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(0,0,0,0.2);
-  border-radius: 10px;
+  padding: 8px 12px;
+  background-color: #f2f2f2;
+  border: 1px solid #999;
+  border-radius: 8px;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   z-index: 10;
 }
 
@@ -61,19 +74,21 @@
   display: flex;
 }
 
-/* === NAV TABS === */
+/* NAV TABS */
 .tabs {
   display: flex;
-  gap: 4px;
-  margin: 10px 20px;
+  justify-content: center;
+  gap: 6px;
+  margin: 15px 0;
+  flex-wrap: wrap;
 }
 
 .tab {
-  padding: 6px 12px;
+  padding: 6px 14px;
   border: none;
+  border-radius: 6px;
   background-color: #ccc;
   cursor: pointer;
-  border-radius: 6px;
 }
 
 .tab.active {
@@ -81,17 +96,55 @@
   color: #fff;
 }
 
-/* === CONTENT === */
+.tab:focus {
+  outline: none;
+}
+
+/* CONTENT */
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
 .tab-content {
   display: none;
-  padding: 10px 20px;
 }
 
 .tab-content.active {
   display: block;
 }
 
-/* === INFO BLOCK === */
 .info-block h3 {
-  margin-top: 12px;
+  margin-top: 15px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contacts-wrapper {
+    justify-content: center;
+  }
+
+  .tab {
+    flex: 1 1 30%;
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
 }
