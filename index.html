@@ -1,40 +1,37 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Гоша Умка Таттс</title>
+  <title>Gosha Umka Tatts</title>
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- HEADER -->
-  <header class="header">
-    <div class="profile">
-      <img src="images/avatar.jpg" alt="avatar" class="avatar" />
-
-      <div class="profile-info">
-        <div class="name">Гоша Умка Таттс</div>
-        <div class="city">Saint Petersburg</div>
-      </div>
-    </div>
-
+  <header>
     <div class="contacts-wrapper">
-      <button id="contactsBtn" class="contacts-btn">Контакты</button>
+      <button id="contactsBtn" class="contacts-btn" data-i18n="contacts">
+        Contacts
+      </button>
+
+      <button id="langToggle" class="lang-btn">
+        RU
+      </button>
 
       <div id="contactsCard" class="contacts-card">
-        <a href="#" target="_blank">Instagram</a>
-        <a href="#" target="_blank">Telegram</a>
+        <a href="#" data-i18n="instagram">Instagram</a>
+        <a href="#" data-i18n="telegram">Telegram</a>
       </div>
     </div>
   </header>
 
   <!-- NAV -->
   <nav class="tabs">
-    <button class="tab active" data-tab="works">Работы</button>
-    <button class="tab" data-tab="sketches">Эскизы</button>
-    <button class="tab" data-tab="info">Информация</button>
+    <button class="tab active" data-tab="works" data-i18n="works">Works</button>
+    <button class="tab" data-tab="sketches" data-i18n="sketches">Sketches</button>
+    <button class="tab" data-tab="info" data-i18n="info">Info</button>
   </nav>
 
   <!-- CONTENT -->
@@ -43,31 +40,31 @@
     <!-- WORKS -->
     <section class="tab-content active" id="works">
       <div class="grid">
-        <!-- картинки работ -->
+        <!-- work images -->
       </div>
     </section>
 
     <!-- SKETCHES -->
     <section class="tab-content" id="sketches">
       <div class="grid">
-        <!-- картинки эскизов -->
+        <!-- sketch images -->
       </div>
     </section>
 
     <!-- INFO -->
     <section class="tab-content" id="info">
       <div class="info-block">
-        <h3>Противопоказания</h3>
-        <p>Текст...</p>
+        <h3 data-i18n="contra_title">Contraindications</h3>
+        <p data-i18n="contra_text">Here you can describe medical conditions or situations that prevent tattooing.</p>
 
-        <h3>Информация о сеансе</h3>
-        <p>Текст...</p>
+        <h3 data-i18n="session_title">Session Information</h3>
+        <p data-i18n="session_text">Details about the tattoo session, including duration, what to expect, and equipment used.</p>
 
-        <h3>Рекомендации перед сеансом</h3>
-        <p>Текст...</p>
+        <h3 data-i18n="prep_title">Before the Session</h3>
+        <p data-i18n="prep_text">Recommendations for preparation before getting a tattoo, such as hydration and skin care.</p>
 
-        <h3>Процесс заживления</h3>
-        <p>Текст...</p>
+        <h3 data-i18n="healing_title">Healing Process</h3>
+        <p data-i18n="healing_text">Instructions on how to take care of the tattoo during the healing period.</p>
       </div>
     </section>
 
