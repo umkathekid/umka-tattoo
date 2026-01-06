@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // === TABS ===
+  // TABS
   const tabs = document.querySelectorAll('.tab');
   const contents = document.querySelectorAll('.tab-content');
 
@@ -8,19 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       contents.forEach(c => c.classList.remove('active'));
-
       tab.classList.add('active');
       document.getElementById(tab.dataset.tab).classList.add('active');
     });
   });
 
-  // === CONTACTS CARD ===
+  // CONTACTS CARD
   const btn = document.getElementById('contactsBtn');
   const card = document.getElementById('contactsCard');
-
   btn.addEventListener('click', () => card.classList.toggle('show'));
 
-  // === LANGUAGE TOGGLE ===
+  // LANGUAGE TOGGLE
   const langBtn = document.getElementById("langToggle");
   let currentLang = localStorage.getItem("lang") || "en";
 
@@ -74,5 +72,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   applyLanguage(currentLang);
-
 });
