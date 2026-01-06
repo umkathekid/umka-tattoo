@@ -12,7 +12,7 @@ tabs.forEach(tab => {
   });
 });
 
-// Contacts card
+// Contacts card toggle
 const btn = document.getElementById('contactsBtn');
 const card = document.getElementById('contactsCard');
 
@@ -62,9 +62,7 @@ const translations = {
 function applyLanguage(lang) {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.dataset.i18n;
-    if (translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
+    if (translations[lang][key]) el.textContent = translations[lang][key];
   });
   langBtn.textContent = lang === "ru" ? "EN" : "RU";
   localStorage.setItem("lang", lang);

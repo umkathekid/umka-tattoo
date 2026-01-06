@@ -2,11 +2,13 @@
 .header {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 12px;
   padding: 10px 20px;
-  background: #fff;
+  background-color: #fff;
 }
 
+/* Аватарка */
 .profile .avatar {
   width: 60px;
   height: 60px;
@@ -15,7 +17,7 @@
   border: 1px solid #000;
 }
 
-/* Контакты + RU/EN */
+/* Контакты + кнопка языка */
 .contacts-wrapper {
   display: flex;
   align-items: center;
@@ -40,11 +42,11 @@
 .contacts-card {
   display: none;
   position: absolute;
-  top: 40px; /* прямо под кнопкой */
+  top: 40px;
   left: 0;
   padding: 10px 15px;
-  background: rgba(255,255,255,0.6); /* легкое стекло */
-  backdrop-filter: blur(8px); /* эффект запотевания */
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(8px);
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 10px;
   flex-direction: column;
@@ -60,7 +62,7 @@
 .tabs {
   display: flex;
   gap: 4px;
-  margin: 10px 0;
+  margin: 10px 20px;
 }
 
 .tab {
@@ -79,6 +81,7 @@
 /* CONTENT */
 .tab-content {
   display: none;
+  padding: 10px 20px;
 }
 
 .tab-content.active {
