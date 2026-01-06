@@ -1,14 +1,17 @@
-/* HEADER */
+/* === HEADER === */
 .header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 12px;
+  gap: 20px;
   padding: 10px 20px;
   background-color: #fff;
+  position: relative;
 }
 
-/* Аватарка */
+.profile {
+  flex-shrink: 0;
+}
+
 .profile .avatar {
   width: 60px;
   height: 60px;
@@ -17,12 +20,12 @@
   border: 1px solid #000;
 }
 
-/* Контакты + кнопка языка */
 .contacts-wrapper {
   display: flex;
   align-items: center;
   gap: 8px;
   position: relative;
+  z-index: 1;
 }
 
 .contacts-btn, .lang-btn {
@@ -38,7 +41,7 @@
   background-color: #ddd;
 }
 
-/* Всплывающая визитка */
+/* Визитка стеклянная */
 .contacts-card {
   display: none;
   position: absolute;
@@ -58,7 +61,7 @@
   display: flex;
 }
 
-/* NAV TABS */
+/* === NAV TABS === */
 .tabs {
   display: flex;
   gap: 4px;
@@ -78,7 +81,7 @@
   color: #fff;
 }
 
-/* CONTENT */
+/* === CONTENT === */
 .tab-content {
   display: none;
   padding: 10px 20px;
@@ -88,7 +91,7 @@
   display: block;
 }
 
-/* INFO BLOCK */
+/* === INFO BLOCK === */
 .info-block h3 {
   margin-top: 12px;
 }
